@@ -8,4 +8,4 @@
 /httpRequests/
 
 # JetBrains ignored files
-**/idea
+**/.idea
