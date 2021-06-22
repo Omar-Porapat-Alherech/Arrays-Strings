@@ -1,4 +1,4 @@
-from Poralib
+# TODO from Poralib
 
 
 # Brute force solution o(n^2) For every element we iterate through the array again n * n = o(n^2)
