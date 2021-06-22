@@ -1,6 +1,3 @@
-# TODO from Poralib
-
-
 # Brute force solution o(n^2) For every element we iterate through the array again n * n = o(n^2)
 # This assumes uppercase and lowercase values are the same 'A' == 'a' = true
 # Assumption that the string contains only letters therefore if len(str) > 27 -> A letter must have been used
@@ -37,9 +34,16 @@ def is_string_unique_bitmap(input_string):
     return True
 
 
-# TODO Complete sort_and_search implementation.
+# Put it in a dict :> o(n)
 def is_string_unique_sort_and_search(input_string):
-    return
+    string_dict = {}
+    for letter in input_string:
+        if letter in string_dict.keys():
+            return False
+        else:
+            string_dict[letter] = 1
+    return True
+
 
 
 if __name__ == '__main__':
@@ -48,4 +52,6 @@ if __name__ == '__main__':
     result = is_string_unique_python_ds('abaababab')
     print(result)
     result = is_string_unique_bitmap('abcde')
+    print(result)
+    result = is_string_unique_sort_and_search('abz')
     print(result)
