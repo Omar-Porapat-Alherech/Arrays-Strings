@@ -1,3 +1,4 @@
+# Create a dict and see if they match.
 def check_permutation_brute_force(string_a, string_b):
     if len(string_a) == len(string_b):
         str_dict_a = {}
@@ -17,7 +18,14 @@ def check_permutation_brute_force(string_a, string_b):
     return False
 
 
-# TODO Sort + compare
+# Once Sorted they should be exactly the same.
+def check_permutation_sort_comp(string_a, string_b):
+    if len(string_a) == len(string_b):
+        string_a = sorted(string_a)
+        string_b = sorted(string_b)
+        if string_a == string_b:
+            return True
+    return False
 
 
 
@@ -48,7 +56,7 @@ def check_permutation_one_dict(string_a, string_b):
 if __name__ == '__main__':
     result = check_permutation_brute_force('aacde', 'abcda')
     print(result)
-    result = check_permutation_brute_force('aacde', 'abda')
+    result = check_permutation_one_dict('aacde', 'abda')
     print(result)
-    result = check_permutation_one_dict('bcdaa', 'bbaad')
+    result = check_permutation_sort_comp('bcdaa', 'badac')
     print(result)
